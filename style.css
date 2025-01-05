@@ -5,60 +5,103 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
     color: white;
-    text-align: center;
     padding: 2rem;
+    text-align: center;
 }
 
 nav {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 1rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 section {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-    color: #333;
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.projets-grid, .competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.projet, .competence {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projet:hover, .competence:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    color: #0d47a1;
     margin-bottom: 1rem;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
+    padding: 1.5rem;
+    background-color: #1a237e;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .projets-grid, .competences-grid {
+        grid-template-columns: 1fr;
+    }
 }
