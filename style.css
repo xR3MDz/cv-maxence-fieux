@@ -16,6 +16,9 @@ header {
     color: white;
     padding: 2rem;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav {
@@ -90,15 +93,13 @@ footer {
     padding: 1.5rem;
     background-color: #1a237e;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 @media (max-width: 768px) {
     nav a {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
+        max-width: 200px;
     }
 
     .projets-grid, .competences-grid {
